@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDo } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ws3ToDo';
+
+  todoLists: ToDo[] = []
+
+  addToDo(todo: ToDo) {
+    this.todoLists = [...this.todoLists, todo]
+  }
 }

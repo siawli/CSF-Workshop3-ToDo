@@ -1,0 +1,13 @@
+<div *ngIf="listToDo.length > 0" class="center">
+    <div>
+        <h1>Tasks</h1>
+    </div>
+
+    <div *ngFor="let task of listToDo" class="task">
+        <h3>{{task.description}}</h3>
+        <div class="italics">
+            <p>{{task.priority}}</p>
+            <p>{{task.dueDate}}</p>
+        </div>
+    </div>
+</div>
